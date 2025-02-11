@@ -1,0 +1,43 @@
+{
+  "name": "dockerize-it",
+  "version": "0.0.1",
+  "description": "Technical challenge project focused on containerization techniques and deployment using Docker and Kubernetes.",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "author": {
+    "name": "Silas Almeida",
+    "email": "meucontato.silas@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/almeida-silas/dockerize-it.git"
+  },
+  "bugs": {
+    "url": "https://github.com/almeida-silas/dockerize-it/issues"
+  },
+  "tags": [
+    "orm",
+    "typescript",
+    "typescript-orm",
+    "typeorm-sample",
+    "typeorm-example",
+    "typeorm-express-example"
+  ],
+  "devDependencies": {
+    "@types/body-parser": "^1.16.8",
+    "@types/express": "^4.11.1",
+    "@types/node": "^9.6.5",
+    "typescript": "^3.3.3333",
+    "ts-node-dev": "^1.1.8"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "typeorm": "^0.2.0"
+  },
+  "scripts": {
+    "start": "tsc && node src/index.js",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+  }
+}
