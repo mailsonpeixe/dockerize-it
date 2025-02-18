@@ -24,6 +24,10 @@ spec:
         environment: {{ .Values.environment }}
         appVersion: {{ .Values.appVersion }}
     spec:
+      imagePullSecrets:
+      {{- range $imagePullSecret := .Values.imagePullSecrets }}
+        - name: {{ $imagePullSecret }}
+      {{- end }}
       serviceAccountName: {{ .Values.name }}
       automountServiceAccountToken: false
       securityContext:
