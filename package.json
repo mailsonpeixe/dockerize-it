@@ -8,6 +8,12 @@
     "name": "Silas Almeida",
     "email": "meucontato.silas@gmail.com"
   },
+  "scripts": {
+    "start": "node src/index.ts",
+    "start:dev": "node --watch --import tsx --env-file-if-exists=.env src/index.ts",
+    "build": "tsc",
+    "typeorm": "node --import tsx node_modules/typeorm/cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/almeida-silas/dockerize-it.git"
@@ -24,18 +30,24 @@
     "typeorm-express-example"
   ],
   "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.20.0",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.4",
+    "@typescript-eslint/parser": "^8.24.1",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.1",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1"
   },
   "dependencies": {
     "express": "^4.21.2",
-    "mysql": "^2.18.1",
+    "mysql2": "^3.12.0",
+    "reflect-metadata": "^0.2.2",
     "typeorm": "^0.3.20"
-  },
-  "scripts": {
-    "start": "node --import tsx --env-file=.env src/index.js",
-    "typeorm": "node --import tsx --env-file=.env node_modules/typeorm/cli.js"
   }
 }
