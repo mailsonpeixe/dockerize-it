@@ -12,7 +12,9 @@
     "start": "node src/index.ts",
     "start:dev": "node --watch --import tsx --env-file-if-exists=.env src/index.ts",
     "build": "tsc",
-    "typeorm": "node --import tsx node_modules/typeorm/cli.js"
+    "typeorm": "node --import tsx node_modules/typeorm/cli.js",
+    "compose:up": "docker-compose up -d && docker-compose logs api -f",
+    "compose:down": "docker-compose down"
   },
   "repository": {
     "type": "git",

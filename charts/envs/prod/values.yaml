@@ -1,0 +1,36 @@
+name: dockerize-it-api
+system: dockerize-it
+environment: prod
+namespace: applications
+appVersion: latest
+
+deployment:
+  image: silassennac4/dockerize-it
+  tag: latest
+  containerPort: 3000
+  resources:
+    requests:
+      cpu: 250m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+service:
+  type: ClusterIP
+
+hpa:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 6
+
+configMaps: [
+  database-config
+]
+
+secrets: [
+  database-secret
+]
+
+envs:
+  PORT: 3000
