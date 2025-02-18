@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-config
+  namespace: applications
+data:
+  DATABASE_HOST: mysql.default.svc.cluster.local
+  DATABASE_PORT: '3306'
+  DATABASE_NAME: dockerize_it
+  DATABASE_SYNCHRONIZE: 'true'
