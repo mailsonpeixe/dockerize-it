@@ -4,8 +4,8 @@ import { DataSource } from 'typeorm';
 import { config } from '../config';
 
 const entities = path.resolve(__dirname, 'entity', '*{.ts,.js}');
-const migrations = path.resolve(__dirname, 'migrations', '*{.ts,.js}');
-const subscribers = path.resolve(__dirname, 'subscribers', '*{.ts,.js}');
+const migrations = path.resolve(__dirname, 'migration', '*{.ts,.js}');
+const subscribers = path.resolve(__dirname, 'subscriber', '*{.ts,.js}');
 
 export const dataSource = new DataSource({
   type: 'mysql',
