@@ -5,7 +5,7 @@ namespace: applications
 appVersion: latest
 
 deployment:
-  image: silassennac4/dockerize-it
+  image: mailsonpeixe/dockerize-it
   tag: latest
   containerPort: 3000
   resources:
