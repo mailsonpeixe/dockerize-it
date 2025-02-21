@@ -47,7 +47,7 @@ spec:
       containers:
         - name: {{ .Values.name }}
           {{- if .Values.deployment.tag }}
-          {{- $tag := (.Values.deployment.tag) }}
+          {{- $tag := .Values.deployment.tag }}
           image: {{ printf "%s:%s" .Values.deployment.image $tag }}
           {{- else}}
           image: {{ .Values.deployment.image }}
