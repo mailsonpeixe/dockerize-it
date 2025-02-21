@@ -48,7 +48,7 @@ spec:
         - name: {{ .Values.name }}
           {{- if .Values.deployment.tag }}
           {{- $tag := .Values.deployment.tag }}
-          image: {{ .Values.deployment.image }}:{{ .Values.deployment.tag }}
+          image: {{ .Values.deployment.image }}:latest
           {{- else}}
           image: {{ .Values.deployment.image }}
           {{end}}
